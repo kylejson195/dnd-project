@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th='http://www.thymeleaf.org/'>
+<head>
+    <meta charset="UTF-8"/>
+    <title></title>
+</head>
+<body class="container">
+
+    <h1>Behold your mighty Hero</h1>
+    <nav th:replace="fragments :: page-header"></nav>
+
+    <p th:text="${adventurers}">Welcome, Adventurer</p>
+
+
+</body>
+</html>

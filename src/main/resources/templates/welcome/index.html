@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th='http://www.thymeleaf.org/'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Dungeons and Dragons Character Creator</title>
+</head>
+<body class="container">
+
+    <h1>Dungeons and Dragons Character Creator</h1>
+
+    <nav th:replace="fragments :: page-header"></nav>
+
+   <table class="table table-striped">
+       <thead>
+        <tr>
+           <th>Greetings!</th>
+
+        </tr>
+       </thead>
+        <tr th:each="adventurer : ${adventurers}">
+            <td th:text="${adventurer.advName}"></td>
+        </tr>
+   </table>
+</body>
+</html>

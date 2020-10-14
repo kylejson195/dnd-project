@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th='http://www.thymeleaf.org/'>
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title>Character Creator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+            <div class="navbar-header">
+                <a th:href="@{/adventurers/welcomeForm}" class="navbar-brand">Character Creator</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item"><a th:href="@{/newHero/create}">Create</a></li>
+                    <li class="nav-item"><a th:href="@{https://www.reddit.com/r/DnD}">DnD Reddit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

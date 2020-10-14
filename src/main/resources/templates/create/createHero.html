@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th='http://www.thymeleaf.org/'>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create Your Adventurer</title>
+</head>
+
+<nav th:replace="fragments :: page-header"></nav>
+
+<body class="container">
+<h1>Create Your Adventurer</h1>
+
+
+
+<form method= 'post' action='/newHero'>
+    <div class="form-group">
+        <label> Name
+            <input type= 'text' name = 'adventurer' class="form-control" />
+        </label>
+    </div>
+    <div class="form-group"></div>
+    <label>Strength
+        <input type="text" name="advStr" class="form-control">
+    </label>
+    </div>
+    <div class="form-group"></div>
+    <label>Dexterity
+        <input type="text" name="advDex" class="form-control">
+    </label>
+    </div>
+    <div class="form-group"></div>
+    <label>Constitution
+        <input type="text" name="advCon" class="form-control">
+    </label>
+    </div>
+    <div class="form-group"></div>
+    <label>Intelligence
+        <input type="text" name="advInt" class="form-control">
+    </label>
+    <div class="form-group"></div>
+    <label>Wisdom
+        <input type="text" name="advWis" class="form-control">
+    </label>
+    </div>
+    <div class="form-group"></div>
+    <label>Charisma
+        <input type="text" name="advCha" class="form-control">
+    </label>
+    </div>
+    <div class="form-group">
+        <input type='submit' value= 'Hail and Well Met' class="btn btn-success"/>
+    </div>
+</form>
+
+</body>
+
+</html>

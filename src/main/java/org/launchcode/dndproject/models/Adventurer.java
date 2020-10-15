@@ -1,10 +1,9 @@
 package org.launchcode.dndproject.models;
 
+import javax.persistence.Entity;
 
-public class Adventurer {
-
-    private int id;
-    private static int nextId= 1;
+@Entity
+public class Adventurer extends AbstractEntity {
 
     private String name;
     private int strength;
@@ -20,21 +19,17 @@ public class Adventurer {
     };
 
 
-//    public Adventurer(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma){
-//        this.name= name;
-//        this.strength = strength;
-//        this.dexterity= dexterity;
-//        this.constitution = constitution;
-//        this.intelligence = intelligence;
-//        this.wisdom = wisdom;
-//        this.charisma = charisma;
-//        this.id= nextId;
-//        nextId++;
-//    }
-
-    public int getId() {
-        return id;
+    public Adventurer(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma){
+        this.name= name;
+        this.strength = strength;
+        this.dexterity= dexterity;
+        this.constitution = constitution;
+        this.intelligence = intelligence;
+        this.wisdom = wisdom;
+        this.charisma = charisma;
     }
+
+
 
     public int getStrength() {
         return strength;

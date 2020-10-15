@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 @Controller
-@RequestMapping("adventurers")
+@RequestMapping("welcome")
 public class WelcomeController {
 
 
@@ -26,14 +26,14 @@ public class WelcomeController {
     public String displayAllAdventurers(Model model) {
         model.addAttribute("title", "All Adventurers");
         model.addAttribute("adventurers", AdvData.getAll());
-        return "adventurers/index";
+        return "welcome/index";
     }
 
     @GetMapping("create")
     public String createAdvForm(Model model){
         model.addAttribute("title", "Create Your Adventurer");
         model.addAttribute(new Adventurer());
-        return "adventurers/create";
+        return "create/createHero";
     }
 
     @PostMapping("create")
@@ -42,7 +42,7 @@ public class WelcomeController {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Your Adventurer");
             ;
-            return "adventurers/create";
+            return "create/createHero";
         }
 
         AdvData.add(newAdv);
@@ -54,8 +54,23 @@ public class WelcomeController {
     public String displayDeleteAdvForm(Model model){
         model.addAttribute("title", "Delete Adventurer");
         model.addAttribute("adventurers", AdvData.getAll());
-        return "adventurers/delete";
+        return "welcome/delete";
     }
 
 
+    @GetMapping("welcomeForm")
+    public String welcomeForm(Model model) {
+        model.addAttribute("title", "All Adventurers");
+        return "welcome/welcomeForm";
+    }
+
+
+    @PostMapping("welcomeForm")
+    public String welcomeFormOne(@ModelAttribute @Valid String advName,
+                                 Errors errors, Model model) {
+        model.addAttribute("title", "All Adventurers");
+        model.addAttribute("advName", advName);
+        System.out.println(advName);
+        return "create/createHero";
+    }
 }

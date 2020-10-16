@@ -6,12 +6,12 @@ import javax.persistence.Entity;
 public class Adventurer extends AbstractEntity {
 
     private String name;
-    private int strength;
-    private int dexterity;
-    private int constitution;
-    private int intelligence;
-    private int wisdom;
-    private int charisma;
+    private int advStr;
+    private int advDex;
+    private int advCon;
+    private int advInt;
+    private int advWis;
+    private int advCha;
 
 
     public Adventurer(){
@@ -21,64 +21,62 @@ public class Adventurer extends AbstractEntity {
 
     public Adventurer(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma){
         this.name= name;
-        this.strength = strength;
-        this.dexterity= dexterity;
-        this.constitution = constitution;
-        this.intelligence = intelligence;
-        this.wisdom = wisdom;
-        this.charisma = charisma;
+        this.advStr = strength;
+        this.advDex= dexterity;
+        this.advCon = constitution;
+        this.advInt = intelligence;
+        this.advWis = wisdom;
+        this.advCha = charisma;
     }
 
 
-
-    public int getStrength() {
-        return strength;
+    public int getAdvStr() {
+        return advStr;
     }
 
-    public void setStrength(int strength) {
-        this.strength = strength;
+    public void setAdvStr(int advStr) {
+        this.advStr = advStr;
     }
 
-    public int getDexterity() {
-        return dexterity;
+    public int getAdvDex() {
+        return advDex;
     }
 
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
+    public void setAdvDex(int advDex) {
+        this.advDex = advDex;
     }
 
-    public int getConstitution() {
-        return constitution;
+    public int getAdvCon() {
+        return advCon;
     }
 
-    public void setConstitution(int constitution) {
-        this.constitution = constitution;
+    public void setAdvCon(int advCon) {
+        this.advCon = advCon;
     }
 
-    public int getIntelligence() {
-        return intelligence;
+    public int getAdvInt() {
+        return advInt;
     }
 
-    public void setIntelligence(int intelligence) {
-        this.intelligence = intelligence;
+    public void setAdvInt(int advInt) {
+        this.advInt = advInt;
     }
 
-    public int getWisdom() {
-        return wisdom;
+    public int getAdvWis() {
+        return advWis;
     }
 
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
+    public void setAdvWis(int advWis) {
+        this.advWis = advWis;
     }
 
-    public int getCharisma() {
-        return charisma;
+    public int getAdvCha() {
+        return advCha;
     }
 
-    public void setCharisma(int charisma) {
-        this.charisma = charisma;
+    public void setAdvCha(int advCha) {
+        this.advCha = advCha;
     }
-
 
     public String getName() {
         return name;

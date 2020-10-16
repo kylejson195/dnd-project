@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th='http://www.thymeleaf.org/'>
+
+<nav th:replace="fragments :: page-header"></nav>
+
 <head>
     <meta charset="UTF-8"/>
-    <title></title>
+    <title>Behold, Your Hero</title>
 </head>
 <body>
 
-Greetings, " + adventurer + "! " + "Let us take the first step towards your epic journey! \n " +
-"\n Are you happy with your attributes? " +
-"\n Strength: " + advStr +
-"\n Dexterity: " + advDex +
-"\n Constitution: " + advCon +
-"\n Intelligence: " + advInt +
-"\n Wisdom: " + advWis +
-"\n Charisma: " + advCha;
+<p>
+    Greetings, " + advName + "! " + "Let us take the first step towards your epic journey! \n " +
+    "\n Are you happy with your attributes? " +
+    "\n Strength: " + advStr +
+    "\n Dexterity: " + advDex +
+    "\n Constitution: " + advCon +
+    "\n Intelligence: " + advInt +
+    "\n Wisdom: " + advWis +
+    "\n Charisma: " + advCha;
+</p>
 
 </body>
 </html>

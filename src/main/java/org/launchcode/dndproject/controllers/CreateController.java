@@ -13,7 +13,7 @@ public class CreateController {
     //Gives me somewhere to go once the form is complete
     @RequestMapping(value="newHero", method= {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
-    public String createAdventurer(@RequestParam String adventurer, int advStr, int advDex, int advCon, int advInt, int advWis, int advCha){
+    public String createAdventurer(@RequestParam String advName, int advStr, int advDex, int advCon, int advInt, int advWis, int advCha){
         return "newHero";
     }
 

@@ -8,17 +8,8 @@
     <title>Behold, Your Hero</title>
 </head>
 <body>
-
-<p>
-    Greetings, " + advName + "! " + "Let us take the first step towards your epic journey! \n " +
-    "\n Are you happy with your attributes? " +
-    "\n Strength: " + advStr +
-    "\n Dexterity: " + advDex +
-    "\n Constitution: " + advCon +
-    "\n Intelligence: " + advInt +
-    "\n Wisdom: " + advWis +
-    "\n Charisma: " + advCha;
-</p>
+    <h1 th:text ="${advName}">Behold your Hero</h1>
+    <p th:text="${advName}">Behold, Your Hero</p>
 
 </body>
 </html>

@@ -68,7 +68,7 @@ public class WelcomeController {
 
     @GetMapping("welcomeForm")
     public String welcomeForm(@ModelAttribute Adventurer adventurer) {
-        AdvData.add(adventurer);
+        adventurerRepository.save(adventurer);
         return "welcome/welcomeForm";
     }
 

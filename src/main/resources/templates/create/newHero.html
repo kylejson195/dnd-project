@@ -8,8 +8,21 @@
     <title>Behold, Your Hero</title>
 </head>
 <body>
-    <h1 th:field ="${adventurer.advName}"></h1>
-
+    <h1>Behold, Your Adventurer!</h1>
+        <h3>Name</h3>
+            <p th:text ="${adventurer.advName}"></p>
+        <h3>Strength</h3>
+            <p th:text="${adventurer.advStr}"></p>
+        <h3>Dexterity</h3>
+            <p th:text ="${adventurer.advDex}"></p>
+        <h3>Constitution</h3>
+            <p th:text ="${adventurer.advCon}"></p>
+        <h3>Intelligence</h3>
+            <p th:text ="${adventurer.advInt}"></p>
+        <h3>Wisdom</h3>
+            <p th:text ="${adventurer.advWis}"></p>
+        <h3>Charisma</h3>
+            <p th:text ="${adventurer.advCha}"></p>
 
 </body>
 </html>

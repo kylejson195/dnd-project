@@ -69,7 +69,7 @@ public class WelcomeController {
     @GetMapping("welcomeForm")
     public String welcomeForm(@ModelAttribute Adventurer adventurer) {
         adventurerRepository.save(adventurer);
-        return "welcome/welcomeForm";
+        return "/welcomeForm";
     }
 
 

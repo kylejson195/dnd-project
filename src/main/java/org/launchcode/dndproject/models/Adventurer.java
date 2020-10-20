@@ -1,11 +1,14 @@
 package org.launchcode.dndproject.models;
 
 import javax.persistence.Entity;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 public class Adventurer extends AbstractEntity {
 
-    private String name;
+    @NotBlank(message= "Please name your Adventurer!")
+    private String advName;
+
     private int advStr;
     private int advDex;
     private int advCon;
@@ -13,14 +16,40 @@ public class Adventurer extends AbstractEntity {
     private int advWis;
     private int advCha;
 
+    private enum Class {
 
-    public Adventurer(){
+        BARBARIAN,
+        BARD,
+        CLERIC,
+        DRUID,
+        FIGHTER,
+        MONK,
+        PALADIN,
+        RANGER,
+        ROGUE,
+        SORCERER,
+        WARLOCK,
+        WIZARD
 
-    };
+    }
+
+    private enum Race {
+
+        DRAGONBORN,
+        DWARF,
+        ELF,
+        GNOME,
+        HALFELF,
+        HALFLING,
+        ORC,
+        HUMAN,
+        TIEFLING,
 
 
-    public Adventurer(String name, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma){
-        this.name= name;
+    }
+
+    public Adventurer(String advName, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma){
+        this.advName = advName;
         this.advStr = strength;
         this.advDex= dexterity;
         this.advCon = constitution;
@@ -29,6 +58,8 @@ public class Adventurer extends AbstractEntity {
         this.advCha = charisma;
     }
 
+    public Adventurer(){
+    };
 
     public int getAdvStr() {
         return advStr;
@@ -78,16 +109,16 @@ public class Adventurer extends AbstractEntity {
         this.advCha = advCha;
     }
 
-    public String getName() {
-        return name;
+    public String getAdvName() {
+        return advName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAdvName(String advName) {
+        this.advName = advName;
     }
 
     @Override
     public String toString() {
-        return name;
+        return advName;
     }
 }

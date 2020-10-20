@@ -67,8 +67,8 @@ public class WelcomeController {
 
 
     @GetMapping("welcomeForm")
-    public String welcomeForm(Model model) {
-        model.addAttribute("title", "All Adventurers");
+    public String welcomeForm(@ModelAttribute Adventurer adventurer) {
+        AdvData.add(adventurer);
         return "welcome/welcomeForm";
     }
 
@@ -78,7 +78,6 @@ public class WelcomeController {
                                  Errors errors, Model model) {
         model.addAttribute("title", "All Adventurers");
         model.addAttribute("advName", advName);
-        System.out.println(advName);
         return "create/createHero";
     }
 }
